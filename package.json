@@ -1,0 +1,19 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "web socket cam 2 cam chat application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anshumanv36/ChatApp.git"
+  },
+  "author": "Anshuman Mishra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anshumanv36/ChatApp/issues"
+  },
+  "homepage": "https://github.com/Anshumanv36/ChatApp#readme"
+}
