@@ -1,0 +1,6 @@
+#.git folder
+.git
+
+#npm(unrequired files)
+node_modules
+npm-debug.log
