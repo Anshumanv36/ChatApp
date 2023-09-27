@@ -39,5 +39,115 @@
         <script defer src="../js/utils.js"></script>
         <script defer src="../js/client.js"></script>
     </head>
-    <html></html>
+
+    <body onload="initClient()">
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+
+        <div id="loadingDivContainer">
+            <div id="loadingDiv" class="center pulsate">
+                <h1>Loading...</h1>
+                <pre>
+Please allow camera & microphone
+access to use this app.          
+                </pre>
+            </div>
+        </div>
+
+        <div id="waitingDivContainer" class="fadeIn">
+            <div id="waitingDiv" class="center pulsate">
+                <h1>Waiting...</h1>
+                <pre>
+Wait user to join.
+                </pre>
+                <button id="shareRoomBtn" class="fas fa-share-nodes"></button>
+                <button id="copyRoomBtn" class="fas fa-copy"></button>
+                <button id="initHideMeBtn" class="fas fa-user"></button>
+                <button id="initVideoBtn" class="fas fa-video"></button>
+                <button id="initAudioBtn" class="fas fa-microphone"></button>
+                <button id="initScreenShareBtn" class="fas fa-desktop"></button>
+                <button id="initSettingsBtn" class="fas fa-ellipsis-vertical"></button>
+                <button id="initHomeBtn" class="fas fa-home"></button>
+            </div>
+        </div>
+
+        <div id="buttonsBar">
+            <button id="hideMeBtn" class="fas fa-user"></button>
+            <button id="videoBtn" class="fas fa-video"></button>
+            <button id="audioBtn" class="fas fa-microphone"></button>
+            <button id="swapCameraBtn" class="fas fa-camera-rotate"></button>
+            <button id="screenShareBtn" class="fas fa-desktop"></button>
+            <button id="chatOpenBtn" class="fas fa-comments"></button>
+            <button id="settingsBtn" class="fas fa-ellipsis-vertical"></button>
+            <button id="homeBtn" class="fas fa-home"></button>
+        </div>
+
+        <div id="settings">
+            <button id="settingsCloseBtn" class="fas fa-times"></button>
+            <label for="videoSource"><i class="fas fa-video"></i> Camera</label>
+            <select id="videoSource"></select>
+            <label><i class="fas fa-image"></i> Video quality</label>
+            <select id="videoQualitySelect">
+                <option value="default">Default</option>
+                <option value="qvga">QVGA</option>
+                <option value="vga">VGA</option>
+                <option value="hd">HD</option>
+                <option value="fhd">FULL HD</option>
+                <option value="2k">2K</option>
+                <option value="4k">4K</option>
+            </select>
+            <label><i class="fas fa-gauge"></i> Video frame rate</label>
+            <select id="videoFpsSelect">
+                <option value="default">Default</option>
+                <option value="60">60 fps</option>
+                <option value="30">30 fps</option>
+                <option value="25">25 fps</option>
+                <option value="20">20 fps</option>
+                <option value="15">15 fps</option>
+                <option value="10">10 fps</option>
+                <option value="5">5 fps</option>
+            </select>
+            <label for="audioSource"><i class="fas fa-microphone"></i> Microphone</label>
+            <select id="audioSource"></select>
+            <hr />
+            <table id="settingsTable">
+                <tr id="maxVideoQualityDiv">
+                    <td>
+                        <span> <i class="fas fa-star"></i> Best quality </span>
+                    </td>
+                    <td><input id="switchMaxVideoQuality" class="toggle" type="checkbox" /></td>
+                </tr>
+                <tr id="aspectRatioDiv">
+                    <td>
+                        <span> <i class="fas fa-display"></i> Aspect ratio </span>
+                    </td>
+                    <td><input id="switchKeepAspectRatio" class="toggle" type="checkbox" /></td>
+                </tr>
+                <tr id="pushToTalkDiv">
+                    <td>
+                        <span> <i class="fas fa-hand-pointer"></i> Push to talk </span>
+                    </td>
+                    <td><input id="switchPushToTalk" class="toggle" type="checkbox" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <span> <i class="fas fa-clock"></i> Session time </span>
+                    </td>
+                    <td><p id="sessionTime">0s</p></td>
+                </tr>
+            </table>
+            <hr />
+        </div>
+
+        <div id="chat" class="chat">
+            <div class="header">
+                <span class="title">Chat</span>
+                <button id="chatCloseBtn" class="fas fa-times"></button>
+            </div>
+            <div class="body" id="chatBody"></div>
+            <div class="footer">
+                <textarea id="chatInput" placeholder="Write a message..."></textarea>
+                <button id="chatSendBtn" class="fas fa-paper-plane"></button>
+            </div>
+        </div>
+    </body>
 </html>
