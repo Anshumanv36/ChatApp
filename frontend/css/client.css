@@ -256,3 +256,320 @@ body {
     height: 15vh;
     margin: auto;
 }
+
+/*--------------------------------------------------------------
+# Video View Options
+--------------------------------------------------------------*/
+
+.mirror {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+}
+
+video:fullscreen {
+    border: var(--border-color);
+    object-fit: contain;
+}
+
+video::-webkit-media-controls {
+    display: none !important;
+}
+
+/*--------------------------------------------------------------
+# My settings
+--------------------------------------------------------------*/
+
+#settings {
+    position: absolute;
+    z-index: 8;
+    top: 0px;
+    right: 0px;
+    display: none;
+    background: var(--primary-color);
+    width: var(--settings-width);
+    height: 100%;
+    padding: 20px;
+    border: var(--border);
+    border-radius: var(--border-radius) 0% 0%;
+    overflow: hidden;
+}
+
+#settings button {
+    display: inline;
+    border: none;
+    float: right;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+#settings label {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+#settings label i {
+    margin-right: 5px;
+}
+
+#settings select {
+    margin-top: 15px;
+    width: 100%;
+    height: 40px;
+    max-width: 280px;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+# My settings table
+--------------------------------------------------------------*/
+
+#settingsTable {
+    margin-top: 20px;
+    width: 100%;
+    color: var(--text-color);
+    color: #fff;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+#settingsTable td,
+th {
+    padding: 10px;
+    text-align: left;
+    border: var(--border);
+}
+#settingsTable tr td span i {
+    margin-right: 5px;
+}
+
+/*--------------------------------------------------------------
+# Swal custom
+--------------------------------------------------------------*/
+
+.swal2-title,
+.swal2-content {
+    background-color: var(--panel-color) !important;
+    color: var(--text-color) !important;
+    text-align: center;
+}
+
+.swal2-html-container {
+    background-color: var(--panel-color) !important;
+    color: var(--text-color) !important;
+}
+
+.swal2-popup {
+    border: var(--border) !important;
+    background-color: var(--primary-color) !important;
+}
+
+.swal2-timer-progress-bar-container {
+    background: #376df9;
+}
+
+/*--------------------------------------------------------------
+# Toggle button 
+# https://danklammer.com/articles/simple-css-toggle-switch/
+--------------------------------------------------------------*/
+
+.toggle {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 55px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    outline: none;
+    border: var(--border);
+    cursor: pointer;
+    background-color: #000000;
+    transition: background-color ease 0.3s;
+}
+
+.toggle:before {
+    content: 'on off';
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 20px;
+    height: 18px;
+    background: #fff;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    font: 10px/20px Helvetica;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-indent: -25px;
+    word-spacing: 35px;
+    color: #fff;
+    text-shadow: -1px -1px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
+}
+
+.toggle:checked {
+    background-color: green;
+}
+
+.toggle:checked:before {
+    left: 32px;
+}
+
+/*--------------------------------------------------------------
+# FadeIn class effect
+--------------------------------------------------------------*/
+
+.fadeIn {
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*--------------------------------------------------------------
+# Pulse class effect
+--------------------------------------------------------------*/
+
+.pulsate {
+    animation: pulsate 3s ease-out;
+    animation-iteration-count: infinite;
+    -webkit-animation: pulsate 3s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0.5;
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+/*--------------------------------------------------------------
+# Common
+--------------------------------------------------------------*/
+
+button {
+    cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+}
+
+hr {
+    margin-top: 25px;
+    border: 1px solid grey;
+}
+
+/*
+z-index:
+    1 video avatar img
+    2 videoHeader
+        - full screen mode
+        - video status
+        - audio status
+    3 videoFooter
+        - peer name
+    ------------------
+    4 myVideoContainer
+    5 remoteVideoContainer
+    6 main buttons
+    7 waitingDivContainer
+    8 settings
+    9 chat
+*/
