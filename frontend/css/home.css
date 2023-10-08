@@ -12,7 +12,8 @@ body {
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-color);
+    background-image: url(../images/background.jpg);
+    background-size: cover;
     font-family: 'Comfortaa';
 }
 
